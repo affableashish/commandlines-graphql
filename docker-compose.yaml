@@ -1,0 +1,10 @@
+version: "3" #Not sure why it's 3
+services: 
+    sqlserver:
+        image: "mcr.microsoft.com/mssql/server:2017-latest"
+        environment: 
+            ACCEPT_EULA: "Y"
+            SA_PASSWORD: "Some123!@#!"
+            MSSQL_PID: Express #Flavor of SQL server
+        ports:
+            - "5434:1433" #"ExternalPort:DockerPort"
