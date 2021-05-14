@@ -22,7 +22,8 @@ namespace CommanderGQL.GraphQL.Platforms
                       .Description("This is the list of available commands for this platform");
         }
 
-        private class Resolvers{
+        private class Resolvers
+        {
             public IQueryable<Command> GetCommands(Platform platform, [ScopedService] AppDbContext context)
             {
                 return context.Commands.Where(c=>c.PlatformId == platform.Id);

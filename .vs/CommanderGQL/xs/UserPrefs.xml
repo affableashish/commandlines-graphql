@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{910ED748-B1D0-4223-8AC7-7D3C37172850}|Default">
+  <MonoDevelop.Ide.ItemProperties.CommanderGQL PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Startup.cs">
+    <Files>
+      <File FileName="GraphQL/Query.cs" Line="22" Column="1" />
+      <File FileName="GraphQL/Platforms/PlatformType.cs" Line="23" Column="1" />
+      <File FileName="GraphQL/Commands/CommandType.cs" Line="1" Column="1" />
+      <File FileName="Startup.cs" Line="42" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CommanderGQL" expanded="True">
+            <Node name="CommanderGQL" expanded="True">
+              <Node name="GraphQL" expanded="True">
+                <Node name="Commands" expanded="True" />
+                <Node name="Platforms" expanded="True" />
+              </Node>
+              <Node name="Startup.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/ashishkhanal/Projects/CommanderGQL/GraphQL/Query.cs" relfile="GraphQL/Query.cs" line="20" column="1" />
+      <Breakpoint file="/Users/ashishkhanal/Projects/CommanderGQL/GraphQL/Query.cs" relfile="GraphQL/Query.cs" line="13" column="1" />
+      <Breakpoint file="/Users/ashishkhanal/Projects/CommanderGQL/GraphQL/Platforms/PlatformType.cs" relfile="GraphQL/Platforms/PlatformType.cs" line="28" column="1" />
+      <Breakpoint file="/Users/ashishkhanal/Projects/CommanderGQL/GraphQL/Platforms/PlatformType.cs" relfile="GraphQL/Platforms/PlatformType.cs" line="13" column="1" />
+      <Breakpoint file="/Users/ashishkhanal/Projects/CommanderGQL/GraphQL/Commands/CommandType.cs" relfile="GraphQL/Commands/CommandType.cs" line="26" column="1" />
+      <Breakpoint file="/Users/ashishkhanal/Projects/CommanderGQL/GraphQL/Commands/CommandType.cs" relfile="GraphQL/Commands/CommandType.cs" line="28" column="1" />
+      <Breakpoint file="/Users/ashishkhanal/Projects/CommanderGQL/GraphQL/Commands/CommandType.cs" relfile="GraphQL/Commands/CommandType.cs" line="12" column="1" />
+      <Breakpoint file="/Users/ashishkhanal/Projects/CommanderGQL/GraphQL/Platforms/PlatformType.cs" relfile="GraphQL/Platforms/PlatformType.cs" line="26" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

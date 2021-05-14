@@ -12,8 +12,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using GraphQL.Server.Ui.Voyager;
-using System.Data;
 using CommanderGQL.GraphQL.Platforms;
+using CommanderGQL.GraphQL.Commands;
 
 namespace CommanderGQL
 {
@@ -37,8 +37,13 @@ namespace CommanderGQL
 
             services.AddGraphQLServer()
                     .AddQueryType<Query>() //Query is the class we added inside GraphQL
+                    .AddMutationType<Mutation>()
+                    .AddSubscriptionType<Subscription>()
                     .AddType<PlatformType>()
-                    .AddType<CommandType>();
+                    .AddType<CommandType>()
+                    .AddFiltering()
+                    .AddSorting()
+                    .AddInMemorySubscriptions(); //Manage and track the subscribers in memory
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,21 +57,18 @@ namespace CommanderGQL
 
             app.UseRouting();
 
-            //See if this works
             app.UseEndpoints(endpoint=>{
                 endpoint.MapGraphQL(); //Setting up GraphQL pipeline. Goto this address: http://localhost:5000/graphql/ to hit this endpoint.
-                //endpoint.MapGraphQLVoyager(); //Setting up GraphQL voyager pipeline. Goto this address: http://localhost:5000/ui/voyager to hit this endpoint
+                endpoint.MapGraphQLVoyager(); //Setting up GraphQL voyager pipeline. Goto this address: http://localhost:5000/ui/voyager to hit this endpoint
             });
 
-            // app.UseEndpoints(endpoints =>
-            // {
-            //     endpoints.MapGraphQL(); 
-            // });
+            //Add websockets
+            app.UseWebSockets();
 
-            app.UseGraphQLVoyager(new VoyagerOptions()
-            {
-                GraphQLEndPoint = "/graphql",
-            }, "/graphql-voyager");
+            // app.UseGraphQLVoyager(new VoyagerOptions()
+            // {
+            //     GraphQLEndPoint = "/graphql",
+            // }, "/graphql-voyager");
         }
     }
 }

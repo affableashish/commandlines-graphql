@@ -11,8 +11,8 @@ namespace CommanderGQL.GraphQL.Commands
         protected override void Configure(IObjectTypeDescriptor<Command> descriptor)
         {
             descriptor.Description("Represents any executable command.");
-            //descriptor.Field(c=>c.HowTo).Description("Brief howTo on how to do a certain task.");
-            //descriptor.Field(c=>c.CommandLine).Description("The command line.");
+            descriptor.Field(c=>c.HowTo).Description("Brief howTo on how to do a certain task.");
+            descriptor.Field(c=>c.CommandLine).Description("The command line.");
 
             //Resolve c => c.Platform field (that is nested in the command object) with a resolver that is below
             descriptor.Field(c => c.Platform)
